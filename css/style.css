@@ -1,0 +1,190 @@
+:root{
+      --desaturated-dark-cyan: hsl(180, 29%, 50%);
+      --light-grayish-cyan: hsl(180, 52%, 96%);
+      --light-grayish-cyan-filter: hsl(180, 31%, 95%);
+      --dark-grayish-cyan: hsl(180, 8%, 52%);
+      --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+      --white: #fff;
+      --black: #000;
+}
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'League Spartan', sans-serif;
+}
+body{
+      background-color: var(--light-grayish-cyan);
+      height: 100vh;
+      overflow-x: hidden;
+}
+.container{
+      width: 100vw;
+}
+header{
+      width: 100%;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      background-image: url(../images/bg-header-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--desaturated-dark-cyan);
+      margin-bottom: 2rem;
+}
+.input-container{
+      display: none;
+      position: relative;
+      bottom: -84%;
+      height: 60px;
+      width: 66%;
+}
+.input-container > .search{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--white);
+      position: relative;
+      z-index: 10;
+      padding: .5rem 2rem;
+      width: 100%;
+      height: 60px;
+      border: none;
+      border-radius: .25rem;
+      box-shadow: 0 10px 50px -20px var(--desaturated-dark-cyan);      
+}
+.search-item-container{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+}
+.input-container > .search > .search-item-container > .search-item{
+      color: var(--desaturated-dark-cyan);
+      height: 40px;
+      border-radius: .25rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      padding-left: 0.5rem;
+      background-color: var(--light-grayish-cyan-filter);
+}
+#clear{
+      cursor: pointer;
+      color: var(--desaturated-dark-cyan);
+}
+#clear:hover{
+      text-decoration: underline;
+}
+.remove-item{
+      height: 100%;
+      width: 40px;
+      border-top-right-radius: .25rem;
+      border-bottom-right-radius: .25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--desaturated-dark-cyan);
+      align-items: center;
+      transition: background .15s ease-in-out;
+      cursor: pointer;
+}
+.remove-item:hover{
+      background-color: var(--black);
+}
+.remove-item > img{
+      width: 40%;
+}
+main{
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      padding: 3rem;
+}
+.card{
+      width: 70%;
+      background-color: var(--white);
+      border-radius: .25rem;
+      padding: 1.5rem 2rem;
+      gap: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: 0 10px 50px -10px var(--desaturated-dark-cyan);
+}
+.borda{
+border-left: 4px solid var(--desaturated-dark-cyan);
+}
+.info{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+}
+.description{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+}
+.company{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+}
+.name{
+      color: var(--desaturated-dark-cyan);
+      font-weight: 700;
+      font-size: 18px;
+}
+.new, .featured{
+      display: flex;
+      align-items: center;
+      background-color: var(--desaturated-dark-cyan);
+      color: var(--white);
+      padding: .35rem .35rem .25rem;
+      border-radius: 2rem;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 14px;
+}
+.featured{
+      background-color: var(--black);
+}
+.position{
+      font-weight: 700;
+      font-size: 18px;
+}
+.specification > ul{
+      list-style: none;
+      display: flex;
+      gap: 10px;
+}
+.specification > ul > li{
+      color: var(--dark-grayish-cyan);
+}
+.tools{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+}
+.tools > section{
+      padding: .75rem .75rem .55rem;
+      font-weight: 700;
+      background-color: var(--light-grayish-cyan-filter);
+      color: var(--desaturated-dark-cyan);
+      border-radius: .25rem;
+      transition: background .25s ease-in-out;
+      cursor: pointer;
+}
+.tools > section:hover{
+      background-color: var(--desaturated-dark-cyan);
+      color: var(--light-grayish-cyan);
+
+}
